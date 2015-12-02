@@ -71,7 +71,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* # Imports
 ---------------------------------------------------------------------------------------------------- */
 
-@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+//@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
 
 
 /* # HTML5 Reset
@@ -180,8 +180,8 @@ textarea:focus,
 }
 
 a {
-	color: #c3251d;
-	text-decoration: underline;
+	color: #5a5f21;
+	text-decoration: none;
 }
 
 a:hover,
@@ -191,7 +191,7 @@ a:focus {
 }
 
 p {
-	margin: 0 0 28px;
+	margin: 0 0 10px;
 	padding: 0;
 }
 
@@ -375,7 +375,7 @@ textarea {
 	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 300;
-	padding: 16px;
+	padding: 5px 0px;
 	width: 100%;
 }
 
@@ -429,7 +429,7 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus  {
-	background-color: #c3251d;
+	background-color: #5a5f21;
 	color: #fff;
 }
 
@@ -469,7 +469,7 @@ th {
 
 td {
 	border-top: 1px solid #ddd;
-	padding: 6px 0;
+	padding: 0px 0;
 }
 
 th {
@@ -527,7 +527,7 @@ th {
 
 .site-inner {
 	clear: both;
-	padding-top: 40px;
+	padding-top: 0px;
 }
 
 /* ## Column Widths and Positions
@@ -538,7 +538,7 @@ th {
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-	width: 980px;
+	max-width: 980px;
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
@@ -554,7 +554,7 @@ th {
 
 .content {
 	float: right;
-	width: 800px;
+	max-width: 800px;
 }
 
 .content-sidebar .content,
@@ -566,7 +566,7 @@ th {
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content {
-	width: 580px;
+	max-width: 580px;
 }
 
 .full-width-content .content {
@@ -577,7 +577,7 @@ th {
 
 .sidebar-primary {
 	float: right;
-	width: 360px;
+	max-width: 360px;
 }
 
 .sidebar-content .sidebar-primary,
@@ -589,7 +589,7 @@ th {
 
 .sidebar-secondary {
 	float: left;
-	width: 180px;
+	max-width: 180px;
 }
 
 .content-sidebar-sidebar .sidebar-secondary {
@@ -751,7 +751,7 @@ th {
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #c3251d;
+	color: #5a5f21;
 }
 
 .widget-title {
@@ -903,7 +903,7 @@ img.alignright,
 }
 
 .enews-widget input[type="submit"] {
-	background-color: #c3251d;
+	background-color: #5a5f21;
 	color: #fff;
 	margin: 0;
 	width: 100%;
@@ -950,12 +950,11 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
-	min-height: 160px;
+	min-height: 60px; 
 }
 
 .site-header .wrap {
-	padding: 40px 0;
+	padding: 0px 0px 0px 60px;
 }
 
 /* ## Title Area
@@ -963,8 +962,8 @@ img.alignright,
 
 .title-area {
 	float: left;
-	padding: 10px 0;
-	width: 360px;
+	padding: 10px 10px;
+	MAX-width: 360px;
 }
 
 .header-full-width .title-area {
@@ -972,23 +971,9 @@ img.alignright,
 }
 
 .site-title {
-	font-size: 32px;
-	font-size: 3.2rem;
-	font-weight: 400;
 	line-height: 1.2;
-}
-
-.site-title a,
-.site-title a:hover,
-.site-title a:focus {
-	color: #333;
-}
-
-.header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
-	float: left;
-	min-height: 60px;
-	width: 100%;
+	font-family: "Times New Roman",Georgia,Times,Serif;
+	color: #ffffff;
 }
 
 .site-description {
@@ -1006,7 +991,7 @@ img.alignright,
 .header-image .site-description,
 .header-image .site-title {
 	display: block;
-	text-indent: -9999px;
+	text-indent: 70px; */
 }
 
 /* ## Widget Area
@@ -1015,7 +1000,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 800px;
+	/* width: 800px; */
 }
 
 
@@ -1036,10 +1021,10 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #ffffff;
 	text-decoration: none;
 	display: block;
-	padding: 30px 24px;
+	padding: 20px 14px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1047,7 +1032,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus  {
-	color: #c3251d;
+	color: #ffffff;
 	text-decoration: underline;
 }
 
@@ -1171,7 +1156,7 @@ img.alignright,
 .nav-primary .genesis-nav-menu .sub-menu a:hover,
 .nav-primary .genesis-nav-menu .sub-menu a:focus,
 .nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a {
-	color: #c3251d;
+	color: #5a5f21;
 	text-decoration: underline;
 }
 
@@ -1189,8 +1174,8 @@ img.alignright,
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 40px;
-	padding: 50px 60px;
+	margin-bottom: 20px;
+	padding: 10px 10px;
 }
 
 .content .entry {
@@ -1279,7 +1264,7 @@ p.entry-meta {
 .archive-pagination li a:hover,
 .archive-pagination li a:focus,
 .archive-pagination .active a {
-	background-color: #c3251d;
+	background-color: #5a5f21;
 	text-decoration: underline;
 }
 
@@ -1366,9 +1351,9 @@ li.comment {
 }
 
 .sidebar li {
-	border-bottom: 1px dotted #ddd;
+	/* border-bottom: 1px dotted #ddd;
 	margin-bottom: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 10px;	*/
 }
 
 .sidebar p:last-child,
@@ -1387,11 +1372,11 @@ li.comment {
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
+	background-color: #d5e0c1;/* #c9e895; #fafdd0; */
+	font-size: 80%;
+	/*font-size: 0.8rem; */
 	line-height: 1;
-	padding: 40px 0;
+	padding: 10px 0;
 	text-align: center;
 }
 
@@ -1401,147 +1386,8 @@ li.comment {
 
 
 /* # Media Queries
----------------------------------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 1200px) {
-
-	.site-inner,
-	.wrap {
-		max-width: 960px;
-	}
-
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-sidebar-content .content-sidebar-wrap {
-		width: 740px;
-	}
-
-	.content,
-	.site-header .widget-area {
-		width: 620px;
-	}
-
-	.sidebar-content-sidebar .content,
-	.sidebar-sidebar-content .content,
-	.content-sidebar-sidebar .content {
-		width: 400px;
-	}
-
-	.sidebar-primary,
-	.title-area {
-		width: 300px;
-	}
-
-}
-
-@media only screen and (max-width: 960px) {
-
-	.site-inner,
-	.wrap {
-		max-width: 800px;
-	}
-
-	.content,
-	.content-sidebar-sidebar .content,
-	.content-sidebar-sidebar .content-sidebar-wrap,
-	.sidebar-content-sidebar .content,
-	.sidebar-content-sidebar .content-sidebar-wrap,
-	.sidebar-primary,
-	.sidebar-secondary,
-	.sidebar-sidebar-content .content,
-	.sidebar-sidebar-content .content-sidebar-wrap,
-	.site-header .widget-area,
-	.title-area {
-		width: 100%;
-	}
-
-	.site-header .wrap {
-		padding: 20px 5%;
-	}
-
-	.header-image .site-title > a {
-		background-position: center top;
-	}
-
-	.genesis-nav-menu li,
-	.site-header ul.genesis-nav-menu,
-	.site-header .search-form {
-		float: none;
-	}
-
-	.genesis-nav-menu,
-	.site-description,
-	.site-header .title-area,
-	.site-header .search-form,
-	.site-title {
-		text-align: center;
-	}
-
-	.genesis-nav-menu a,
-	.genesis-nav-menu > .first > a,
-	.genesis-nav-menu > .last > a {
-		padding: 20px 16px;
-	}
-
-	.site-header .search-form {
-		margin: 16px auto;
-	}
-
-	.genesis-nav-menu li.right {
-		display: none;
-	}
-
-}
-
-@media only screen and (max-width: 800px) {
-
-	body {
-		background-color: #fff;
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
-
-	.site-inner,
-	.wrap {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
-	.archive-description,
-	.author-box,
-	.comment-respond,
-	.entry,
-	.entry-comments,
-	.entry-pings,
-	.sidebar .widget,
-	.site-header {
-		padding: 0;
-	}
-
-	.archive-pagination li a {
-		margin-bottom: 4px;
-	}
-
-	.five-sixths,
-	.four-sixths,
-	.one-fourth,
-	.one-half,
-	.one-sixth,
-	.one-third,
-	.three-fourths,
-	.three-sixths,
-	.two-fourths,
-	.two-sixths,
-	.two-thirds {
-		margin: 0;
-		width: 100%;
-	}
-
-	.sidebar .widget.enews-widget {
-		padding: 40px;
-	}
-
-}
+ * moved to custom.css since 2015/11/28
+ */
 
 
 /* # Print Styles
@@ -1564,7 +1410,7 @@ li.comment {
 	}
 
 	a[href]:after {
-		content: " (" attr(href) ")";
+		/* content: " (" attr(href) ")"; */
 	}
 
 	abbr[title]:after {

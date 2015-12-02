@@ -1,3 +1,83 @@
 /* (C) Copyright Bobbing Wide 2015 */
-/* Dummy custom.css for genesis-hm theme */
+/* Custom.css for genesis-hm theme */
 /* Note that this doesn't get ZIPped by tip.bat */
+
+/**
+ * Overrides to genesis theme style.css for: 
+ * - Colours
+ * - Fonts 
+ * - Padding and margins 
+ * - Media queries
+ * 
+ * Let's see if this works!
+ * 
+ */
+.site-header {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+
+.site-title a,
+.site-title a:hover,
+.site-title a:focus {
+	color: #ffffff;
+}
+
+.genesis-nav-menu a {
+   background: #D2D28E;
+   background: linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   background: -moz-linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   background: -o-linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   background: -ms-linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   background: linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   -svg-background: linear-gradient(top, #DEDEAB 0, #C8C874 100%) no-repeat;
+   color: #5F5F26;
+}
+
+.genesis-nav-menu a {
+   border:1px solid #D2D28E;
+	 border-radius: 1px;
+   padding: 5px 17px;
+   margin: 30px 3px 2px 3px;
+   text-decoration: none;
+}
+
+.site-title {
+	font-family: 'Trebuchet MS', Arial, Helvetica, Sans-Serif;
+	font-size: 41px;
+	font-size: 4.1rem;
+	font-weight: 400;
+}
+
+
+/**
+ * We want the header image AND the title / description
+ 
+
+	background: 
+		url( 'images/logo.png' ) no-repeat bottom left;
+	background-size: 60px, auto;
+ */
+
+
+
+
+.header-image .site-title > a {
+}
+
+.title-area {
+
+	background: url(images/logo.png) no-repeat left;
+	float: left;
+	min-height: 70px;
+	
+	
+	background-size: 70px, auto;
+	background-color: #222;
+}
+ 
+
+ 
+
