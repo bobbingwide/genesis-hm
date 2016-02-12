@@ -284,14 +284,15 @@ function genesis_hm_functions_loaded() {
 	 'header',
 	//	'nav',
 	//        'subnav',
-		'site-inner'
+		'site-inner',
+		'footer-widgets'
 	) );
 
 	//* Add support for custom background
 	add_theme_support( 'custom-background' );
 
-	//* Add support for 5-column footer widgets - requires extra CSS
-	add_theme_support( 'genesis-footer-widgets', 5 );
+	//* Add support for 4-column footer widgets - requires extra CSS
+	add_theme_support( 'genesis-footer-widgets', 4 );
 
 	add_filter( 'genesis_footer_creds_text', "hm_footer_creds_text" );
 	
