@@ -12,3 +12,11 @@ Github project link: https://github.com/bobbingwide/genesis-hm
 4. Activate the Genesis Image child theme
 
 
+## Change Log ##
+
+= 0.0.0 = 
+* Add: First version for herbmiller.me
+
+
+
+

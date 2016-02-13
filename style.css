@@ -4,9 +4,9 @@ Theme URI: http://www.bobbingwide.com/themes/genesis-hm
 Description: Child theme of genesis framework with image.php for Herb Miller
 Author: Bobbing Wide  
 Author URI: http://www.oik-plugins.com/author/bobbingwide
-Version: 1.0 
+Version: 0.0.0 
 Template: genesis 
-Template Version: 2.2.3 
+Template Version: 2.2.6 
 Tags:   
 License: GPL-2.0+  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
@@ -1005,7 +1005,7 @@ img.alignright,
 
 .site-header .widget-area {
 	float: right;
-	text-align: right;
+	/* text-align: right; */
 	/* width: 800px; */
 }
 
@@ -1038,7 +1038,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus  {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: underline;
 }
 
@@ -1068,7 +1068,7 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
-	margin: -55px 0 0 199px;
+	margin: -55px 0 0 -199px;
 }
 
 .genesis-nav-menu .menu-item:hover {

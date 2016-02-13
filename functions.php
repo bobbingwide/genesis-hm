@@ -1,13 +1,6 @@
-<?php // (C) Copyright Bobbing Wide 2015
+<?php // (C) Copyright Bobbing Wide 2015, 2016
 
 genesis_hm_functions_loaded();
-
-
-
-//* Child theme (do not remove) - is this really necessary? 
-define( 'CHILD_THEME_NAME', 'Herb Miller' );
-define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes' );
-define( 'CHILD_THEME_VERSION', '2.2.3' );
 
 
 /**
@@ -267,6 +260,10 @@ function genesis_hm_pre_get_option_site_layout( $layout, $setting ) {
  * Register the hooks for this theme
  */
 function genesis_hm_functions_loaded() {
+	//* Child theme (do not remove) - is this really necessary? 
+	define( 'CHILD_THEME_NAME', 'Herb Miller' );
+	define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes' );
+	define( 'CHILD_THEME_VERSION', '2.2.3' );
 	// Start the engine	- @TODO Is this necessary?
 	include_once( get_template_directory() . '/lib/init.php' );
 	
@@ -306,7 +303,40 @@ function genesis_hm_functions_loaded() {
 	//add_filter( "genesis_edit_post_link", "__return_false" );
 	
   //genesis_hm_register_sidebars();
+	//add_filter( 'wp_nav_menu_items', 'genesis_hm_wp_nav_menu_items', 10, 2 );
+	
+	//* Enqueue scripts and styles
+	add_action( 'wp_enqueue_scripts', 'genesis_hm_wp_enqueue_scripts' );
 
 }
 
-genesis_hm_functions_loaded();
+/**
+ * Create a responsive menu without JavaScript
+ *
+ * Is this sensible?
+ * It's not as easy as using the global.js which already exists
+ 
+ *
+ * 
+ */ 
+function genesis_hm_wp_nav_menu_items( $menu, $args ) {
+	bw_trace2();
+	if ( 'primary' === $args->menu->name ) {
+		$rmi = '<div class="responsive-menu-icon"></div>';
+		$menu = $rmi . $menu ;
+	}
+	return( $menu );
+}
+
+
+function genesis_hm_wp_enqueue_scripts() {
+
+	wp_enqueue_script( 'hm-global', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_style( 'dashicons' );
+	
+	//wp_enqueue_style( 'rjdap-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
+
+}
+
+
+
