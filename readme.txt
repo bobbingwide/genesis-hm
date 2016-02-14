@@ -14,6 +14,10 @@ Github project link: https://github.com/bobbingwide/genesis-hm
 
 ## Change Log ##
 
+= 0.0.1 = 
+* Fixed: Issue #1 - better responsive sidebars and menu colors
+
+
 = 0.0.0 = 
 * Add: First version for herbmiller.me
 
