@@ -997,7 +997,7 @@ img.alignright,
 .header-image .site-description,
 .header-image .site-title {
 	display: block;
-	text-indent: 70px; */
+	text-indent: 70px; 
 }
 
 /* ## Widget Area
@@ -1208,8 +1208,8 @@ img.alignright,
 }
 
 .entry-content code {
-	background-color: #333;
-	color: #ddd;
+	background-color: #eee;
+	color: #000;
 }
 
 /* ## Entry Meta
