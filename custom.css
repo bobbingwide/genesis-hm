@@ -119,6 +119,37 @@
 span.bw_follow_me:hover {
 	color: #f5f5f5;
 }
+
+
+/**
+ * Reduce the sidebar padding at 1050px 
+ */
+@media only screen and ( max-width: 1050px ) {
+	.sidebar .widget { 
+		padding: 20px 0.5%;
+	}
+}
+
+
+/**
+ * Lose the sidebar at 960px 
+ */
+@media only screen and ( max-width: 960px ) {
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap,
+	.content,
+	.sidebar-primary,
+	.sidebar-secondary  {
+		width: 100%;
+	}
+	
+	.sidebar .widget { 
+		padding: 20px 2%;
+	}
+	
+}
 	
 
 
@@ -220,13 +251,7 @@ span.bw_follow_me:hover {
 		background: none;
 	}
 
-
-
-
-
 }
- 
-
 
 
 @media only screen and ( max-width: 480px ) {
@@ -246,6 +271,14 @@ span.bw_follow_me:hover {
 	
 	.genesis-nav-menu a {
 		margin-top: 2px;
+	}
+	
+	.genesis-nav-menu a:hover, 
+	.genesis-nav-menu a:focus, 
+	.genesis-nav-menu .current-menu-item > a, 
+	.genesis-nav-menu .sub-menu .current-menu-item > a:hover, 
+	.genesis-nav-menu .sub-menu .current-menu-item > a:focus  {
+		color: #5f5f26;
 	}
 
 }

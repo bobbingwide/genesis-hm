@@ -560,7 +560,8 @@ th {
 
 .content {
 	float: right;
-	max-width: 800px;
+	/* max-width: 800px; */
+	width: 66%;
 }
 
 .content-sidebar .content,
@@ -572,7 +573,8 @@ th {
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content {
-	max-width: 580px;
+	/* max-width: 580px; */
+	width: 50%;
 }
 
 .full-width-content .content {
@@ -583,7 +585,9 @@ th {
 
 .sidebar-primary {
 	float: right;
-	max-width: 360px;
+	/* max-width: 360px; */
+	width: 30%;
+	
 }
 
 .sidebar-content .sidebar-primary,
@@ -1370,7 +1374,7 @@ li.comment {
 .sidebar .widget {
 	background-color: #fff;
 	margin-bottom: 40px;
-	padding: 40px;
+	padding: 20px 2%;
 }
 
 
