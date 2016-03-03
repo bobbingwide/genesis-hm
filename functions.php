@@ -150,7 +150,7 @@ function genesis_hm_functions_loaded() {
 	
 	//* Enqueue scripts and styles
 	add_action( 'wp_enqueue_scripts', 'genesis_hm_wp_enqueue_scripts' );
-
+	add_action( 'oik_loaded', 'genesis_hm_oik_loaded' );
 }
 
 /**
@@ -180,6 +180,24 @@ function genesis_hm_wp_enqueue_scripts() {
 	//wp_enqueue_style( 'rjdap-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
 
 }
+
+function genesis_hm_oik_loaded() {
+	//do_action( "oik_add_shortcodes" );
+	add_filter( "wp_title", "genesis_hm_wp_title", 16, 3 ); 
+}
+
+/** 
+ * Implement 'wp_title' filter after WPSEO_Frontend::title
+ * 
+ */
+function genesis_hm_wp_title( $title, $sep, $seplocation ) {
+	if ( false !== strpos( $title, "[" ) ) {
+		do_action( "oik_add_shortcodes" );
+		$title = bw_do_shortcode( $title );
+	}
+	return( $title );
+}
+
 
 
 
