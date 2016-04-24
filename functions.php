@@ -150,6 +150,10 @@ function genesis_hm_functions_loaded() {
 	
 	//* Enqueue scripts and styles
 	add_action( 'wp_enqueue_scripts', 'genesis_hm_wp_enqueue_scripts' );
+	
+	//* Customize the entry meta in the entry footer
+	add_filter( 'genesis_post_meta', 'genesis_hm_post_meta_filter' );
+	
 	add_action( 'oik_loaded', 'genesis_hm_oik_loaded' );
 }
 
@@ -194,10 +198,19 @@ function genesis_hm_wp_title( $title, $sep, $seplocation ) {
 	if ( false !== strpos( $title, "[" ) ) {
 		do_action( "oik_add_shortcodes" );
 		$title = bw_do_shortcode( $title );
+		$title = strip_tags( $title );
 	}
 	return( $title );
 }
 
+/**
+ * Implement "genesis_post_meta" filter
+ * 
+ */
+function genesis_hm_post_meta_filter( $post_meta ) {
+	$post_meta = 'Written by [post_author_posts_link] [post_categories before=" &middot; Categorized: "]  [post_tags before=" &middot; Tagged: "]';
+	return $post_meta;
+}
 
 
 
