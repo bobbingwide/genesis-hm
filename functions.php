@@ -138,7 +138,7 @@ function genesis_hm_functions_loaded() {
 	
   add_filter( 'genesis_pre_get_option_site_layout', 'genesis_hm_pre_get_option_site_layout', 10, 2 );
 	
-	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+	//remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 	
 	// Remove post info
 	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
@@ -210,9 +210,12 @@ function genesis_hm_wp_title( $title, $sep, $seplocation ) {
 /**
  * Implement "genesis_post_meta" filter
  * 
+ * @param string $post_meta
+ * @return string what we want it to be
+ * 
  */
 function genesis_hm_post_meta_filter( $post_meta ) {
-	$post_meta = 'Written by [post_author_posts_link] [post_categories before=" &middot; Categorized: "]  [post_tags before=" &middot; Tagged: "]';
+	$post_meta = '[post_categories before="Categories: "][post_tags before="Tags: "]';
 	return $post_meta;
 }
 
