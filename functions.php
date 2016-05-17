@@ -176,13 +176,17 @@ function genesis_hm_wp_nav_menu_items( $menu, $args ) {
 }
 
 
+/**
+ * Enqueue scripts and styles
+ *
+ * @TODO We seem to be half way between removing global.js and using CSS.
+ * 
+ * 
+ */
 function genesis_hm_wp_enqueue_scripts() {
-
 	wp_enqueue_script( 'hm-global', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_style( 'dashicons' );
-	
 	//wp_enqueue_style( 'rjdap-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
-
 }
 
 function genesis_hm_oik_loaded() {
