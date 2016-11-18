@@ -1,5 +1,8 @@
 /* (C) Copyright Bobbing Wide 2016
  * 
+ * This code contains logic to handle the responsive menu 
+ * and logic to cater for touch screens
+
  * 
  */
 jQuery(function( $ ){
@@ -42,4 +45,26 @@ jQuery(function( $ ){
 		});
 	});
 
+  //taphover - a solution to the lack of hover on touch devices.
+	//more info: http://www.hnldesign.nl/work/code/mouseover-hover-on-touch-devices-using-jquery/
+	$('li.menu-item-has-children').on('touchstart', function (e) {
+			'use strict'; //satisfy the code inspectors
+			var link = $(this); //preselect the link
+
+			if ( window.innerWidth <= 480 ) {
+				return true;
+			}
+			if (link.hasClass('hover')) {
+					return true;
+			} else {
+					link.addClass('hover');
+					$('li.menu-item-has-children').not(this).removeClass('hover');
+					e.preventDefault();
+					return false; //extra, and to make sure the function has consistent return points
+		 }
+	});
+
+
+
 });
+
