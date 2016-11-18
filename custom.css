@@ -121,6 +121,90 @@ span.bw_follow_me:hover {
 }
 
 
+
+div.hover img.full { 
+    position: relative; 
+    margin: 0 auto; 
+    width: 100%;
+    
+}
+
+div.hover img.full:hover { 
+    opacity: 0.4;
+		
+		border: 1px solid grey;
+}   
+
+div.hover { 
+    position: relative;  
+}
+
+div.hover a { 
+	display:block; 
+}
+
+div.hover:after {
+    padding-top: 150%;
+  }
+  
+div.hover p { 
+    position: relative; 
+    width: 100%; 
+    overflow: hidden; 
+    -webkit-margin-before: 0px; 
+    -webkit-margin-after: -2px; 
+}
+div.hover span.title { 
+    display: block; 
+    bottom: 0%; 
+    position: absolute; 
+    margin: 0 auto; 
+    width: 100%;
+    padding: 2px 2px 2px 8px;
+}
+div.hover p.caption { 
+    position: absolute; 
+    top: 50%; 
+}
+div.hover p.description { 
+    position: absolute; 
+    top: 80%; 
+ }
+
+div.hover span.title,
+div.hover p.caption,
+div.hover p.description { 
+    visibility: hidden;
+}
+
+
+div.hover:hover span.title {
+    visibility: visible;
+}
+
+div.hover:hover {
+    color: #fff;
+}
+
+div.hover:hover span.title {
+    background: #333;
+}
+
+div.hover a:-webkit-any-link {
+    text-decoration: none;
+}
+
+img.full,
+div.hover {
+    -webkit-transition: all 0.5s ease-in-out;
+	-moz-transition:    all 0.5s ease-in-out;
+	-ms-transition:     all 0.5s ease-in-out;
+	-o-transition:      all 0.5s ease-in-out;
+	transition:         all 0.5s ease-in-out;
+}    
+    
+
+
 /**
  * Reduce the sidebar padding at 1050px 
  */
