@@ -3,8 +3,8 @@ Contributors: bobbingwide, vsgloik
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: genesis, image, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 Requires at least: 3.9
-Tested up to: 4.5
-Version: 0.0.2
+Tested up to: 4.7-beta4
+Version: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,10 +17,7 @@ genesis-hm is a child theme for the Genesis Theme Framework, implemented on herb
 - Menu in header widgets
 - Unused primary and secondary nav menus
 - Right Hand Sidebar
-- 4 footer widgets
-
-
-Github project link: https://github.com/bobbingwide/genesis-hm
+- 4 footer widgets - using genesis-footer-widgets
 
 == Installation ==
 
@@ -34,6 +31,13 @@ Github project link: https://github.com/bobbingwide/genesis-hm
 
 
 == Change Log ==
+= 0.0.3 = 
+* Added: jQuery to enable drop down menu on iPad [github bobbingwide genesis-hm issue 4]
+* Added: Disable caching of style.css when developing child theme styling [github bobbingwide genesis-hm issue 6]
+* Changed: Improved the styling on the sites page. [github bobbingwide genesis-hm issue 5]
+* Changed: Reduced padding in drop-down part of menu [github bobbingwide genesis-hm issue 4]
+* Fixed: Categories and tags not being displayed [github bobbingwide genesis-hm issue 3]
+
 = 0.0.2 =
 * Added: Add post categories and tags
 * Changed: initial size of footer widgets
@@ -64,7 +68,8 @@ GNU General Public License for more details.
 genesis-hm does not bundle third-party resources:
 
 == Notes ==
-Dependent upon the Genesis Theme Framework, genesis-footer-widgets and other oik plugins.
+Dependent upon the Genesis Theme Framework.
+Benefits from genesis-footer-widgets and other oik plugins.
 
 
 
