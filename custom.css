@@ -120,6 +120,13 @@ span.bw_follow_me:hover {
 	color: #f5f5f5;
 }
 
+div.center img.full {
+	display: block;
+	margin: 0 auto;
+}
+
+section#text-16 { background: transparent; padding: 0;}
+
 
 
 div.hover img.full { 
