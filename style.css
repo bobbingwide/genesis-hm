@@ -971,7 +971,7 @@ img.alignright,
 .title-area {
 	float: left;
 	padding: 10px 10px;
-	MAX-width: 360px;
+	max-width: 360px;
 }
 
 .header-full-width .title-area {
