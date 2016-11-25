@@ -22,25 +22,35 @@ function hm_footer_creds_text( $text ) {
 /**
  * Display the post info in our style
  *
- * We only want to display the post date and post modified date
- * plus the post_edit link. 
- * Note: The post edit link may appear multiple times
+ * We only want to display the post date and post modified date plus the post_edit link. 
+ * 
+ * Note: On some pages the post edit link appeared multiple times - so we had to find a fancy way
+ * of turning it off, except when we really wanted it. 
+ * Solution was to not use "genesis_post_info" but to expand shortcodes ourselves  
+ *
  *
  */
 function genesis_hm_post_info() {
+	remove_filter( "genesis_edit_post_link", "__return_false" );
 	$output = genesis_markup( array(
     'html5'   => '<p %s>',
     'xhtml'   => '<div class="post-info">',
     'context' => 'entry-meta-before-content',
     'echo'    => false,
 	) );
-	$string = sprintf( __( 'Published %1$s', 'genesis-hm' ), '[post_date]' );
+	$string = sprintf( __( 'Published: %1$s', 'genesis-hm' ), '[post_date]' );
+	$string .= '<span class="splitbar">';
 	$string .= ' | ';
-	$string .= sprintf( __( 'Last updated %1$s', 'genesis-hm' ), '[post_modified_date]' );
+	$string .= '</span>';
+	$string .= '<span class="lastupdated">';
+	$string .= sprintf( __( 'Last updated: %1$s', 'genesis-hm' ), '[post_modified_date]' );
+	$string .= '</span>';
   $string .= ' [post_edit]';
-	$output .= apply_filters( 'genesis_post_info', $string);
+	//$output .= apply_filters( 'do_shortcodes', $string);
+	$output .= do_shortcode( $string );
 	$output .= genesis_html5() ? '</p>' : '</div>';  
 	echo $output;
+	add_filter( "genesis_edit_post_link", "__return_false" );
 }
 
 /**
@@ -149,6 +159,7 @@ function genesis_hm_functions_loaded() {
 	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 	add_action( 'genesis_entry_footer', 'genesis_hm_post_info' );
 	//add_filter( "genesis_edit_post_link", "__return_false" );
+	
 	
   //genesis_hm_register_sidebars();
 	//add_filter( 'wp_nav_menu_items', 'genesis_hm_wp_nav_menu_items', 10, 2 );
