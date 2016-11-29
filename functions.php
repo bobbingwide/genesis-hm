@@ -111,6 +111,7 @@ function genesis_hm_pre_get_option_site_layout( $layout, $setting ) {
 
 /**
  * Register the hooks for this theme
+ * 
  */
 function genesis_hm_functions_loaded() {
 	//* Child theme (do not remove) - is this really necessary? 
@@ -171,6 +172,11 @@ function genesis_hm_functions_loaded() {
 	add_filter( 'genesis_post_meta', 'genesis_hm_post_meta_filter' );
 	
 	add_action( 'oik_loaded', 'genesis_hm_oik_loaded' );
+	
+	
+	add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+	add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
+	
 }
 
 /**
