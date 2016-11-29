@@ -214,6 +214,20 @@ div.hover {
 	background-color: #f5f5f5;
 	margin: 3px 0;
 }
+
+
+img.post-image,
+div.featured img.featured {
+    transition: all 1s ease;   
+    margin: 0 2%;
+		max-width: 96%;
+}
+
+img.post-image:hover,
+div.featured img.featured:hover {  
+    margin: 0;
+		max-width: 100%;
+}
     
 
 
