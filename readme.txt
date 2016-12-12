@@ -3,8 +3,8 @@ Contributors: bobbingwide, vsgloik
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: genesis, image, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 Requires at least: 3.9
-Tested up to: 4.7-beta4
-Version: 0.0.3
+Tested up to: 4.7
+Version: 0.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,13 @@ genesis-hm is a child theme for the Genesis Theme Framework, implemented on herb
 
 
 == Change Log ==
+= 0.0.4 = 
+* Fixed: Shortcodes not expanded in archive[ github bobbingwide genesis-hm issues 7]
+* Changed: Add image hovering with CSS transitions
+* Changed: Styling of list items in primary sidebar
+* Changed: Improve responsive display of Published | Last updated [github bobbingwide genesis-hm issues 8]
+* Tested: With WordPress 4.7
+
 = 0.0.3 = 
 * Added: jQuery to enable drop down menu on iPad [github bobbingwide genesis-hm issue 4]
 * Added: Disable caching of style.css when developing child theme styling [github bobbingwide genesis-hm issue 6]
