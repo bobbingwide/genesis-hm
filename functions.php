@@ -173,9 +173,9 @@ function genesis_hm_functions_loaded() {
 	
 	add_action( 'oik_loaded', 'genesis_hm_oik_loaded' );
 	
-	
-	add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
-	add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
+	// Let this be controlled by the individual author
+	//add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+	//add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
 	
 }
 
@@ -214,6 +214,7 @@ function genesis_hm_wp_enqueue_scripts() {
 function genesis_hm_oik_loaded() {
 	//do_action( "oik_add_shortcodes" );
 	add_filter( "wp_title", "genesis_hm_wp_title", 16, 3 ); 
+	do_action( "oik_add_shortcodes" );
 }
 
 /** 
