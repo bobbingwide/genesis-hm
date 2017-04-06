@@ -1,4 +1,4 @@
-/* (C) Copyright Bobbing Wide 2015, 2016 */
+/* (C) Copyright Bobbing Wide 2015, 2017 */
 /* Custom.css for genesis-hm theme */
 /* Note that this doesn't get ZIPped by tip.bat */
 
@@ -227,6 +227,12 @@ img.post-image:hover,
 div.featured img.featured:hover {  
     margin: 0;
 		max-width: 100%;
+}
+
+div.bw_tides_0 a:nth-of-type(2):after {
+	/* display: block; */
+	content:"\000A";
+	white-space: pre;
 }
     
 
