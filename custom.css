@@ -230,10 +230,17 @@ div.featured img.featured:hover {
 		max-width: 100%;
 }
 
+/**
+
 div.bw_tides_0 a:nth-of-type(2):after {
-	/* display: block; */
 	content:"\000A";
 	white-space: pre;
+}
+*/
+
+div.bw_tides_0 span:nth-of-type(2) {
+	display: block;
+	padding-bottom: 5px;
 }
     
 
