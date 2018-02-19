@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2015, 2016
+<?php // (C) Copyright Bobbing Wide 2015-2018
 
 genesis_hm_functions_loaded();
 
@@ -176,6 +176,7 @@ function genesis_hm_functions_loaded() {
 	// Let this be controlled by the individual author
 	//add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 	//add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
+	add_action( "after_setup_theme", "genesis_hm_after_setup_theme" );
 	
 }
 
@@ -240,6 +241,20 @@ function genesis_hm_wp_title( $title, $sep, $seplocation ) {
 function genesis_hm_post_meta_filter( $post_meta ) {
 	$post_meta = '[post_categories before="Categories: "][post_tags before="Tags: "]';
 	return $post_meta;
+}
+
+
+
+function genesis_hm_after_setup_theme() {
+	add_theme_support( 'editor-color-palette',
+        '#d2d28e',	// Nav bar menu background
+        '#5a5f21',	// Hovered links
+        '#eee',     //
+        '#d5e0c1'		// Footer background
+    );
+		
+	add_theme_support( 'align-wide' );
+
 }
 
 
