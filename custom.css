@@ -471,7 +471,22 @@ pre.wp-block-free {
 	margin: 0px;
 }
 
+/**
+ * CSS for hacking the size of SVG icons
+ * without changing width= height= and viewBox=
+ */
+svg.svg32 {
+	width: 32px;
+	height: 32px;
+} 
 
+svg.svg48 {
+	width: 48px;
+	height: 48px;
+} 
 
- 
+svg.svg64 {
+	width: 64px;
+	height: 64px;
+} 
 
