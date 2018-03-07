@@ -485,8 +485,27 @@ svg.svg48 {
 	height: 48px;
 } 
 
+
+code.svg64 svg, 
 svg.svg64 {
 	width: 64px;
 	height: 64px;
-} 
+}
+
+code svg {
+	display: block;
+}
+code.svg64 td {
+	width: 16.666%;
+	padding-top: 30px;
+	border-top: 0px solid #ffffff;
+	font-size: 16px;
+}
+
+div.textwidget p.warning {
+	background-color: yellow;
+	color: black;
+	font-weight: bold;
+}
+
 
