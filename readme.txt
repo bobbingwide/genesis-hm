@@ -2,9 +2,9 @@
 Contributors: bobbingwide, vsgloik
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: genesis, image, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
-Requires at least: 3.9
-Tested up to: 4.7
-Version: 0.0.4
+Requires at least: 5.0.3
+Tested up to: 5.0.3
+Version: 0.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,16 @@ genesis-hm is a child theme for the Genesis Theme Framework, implemented on herb
 
 
 == Change Log ==
+= 0.1.0 = 
+* Added: Add support for styling SVG icons created by bw_dash shortcode
+* Added: Support for WordPress 5.0 [github bobbingwide genesis-hm issues 10]
+* Changed: Add margin-top to footer widgets
+* Changed: Add new line before 'on date', [github bobbingwide uk-tides issue 5]
+* Changed: Add styles for svg64 classs for [bw_dash] shortcode, and yellow background for textwidget p.warning
+* Changed: Change bw_tides formatting
+* Fixed: Fix nested list styling in widget area., [github bobbingwide genesis-hm issues 9]
+* Fixed: Update logic for a simple editor colour palette [github bobbingwide genesis-hm issues 10]
+
 = 0.0.4 = 
 * Fixed: Shortcodes not expanded in archive[ github bobbingwide genesis-hm issues 7]
 * Changed: Add image hovering with CSS transitions
@@ -59,7 +69,7 @@ genesis-hm is a child theme for the Genesis Theme Framework, implemented on herb
 
 == Copyright ==
 
-genesis-hm (C) Copyright Bobbing Wide 2015,2016
+genesis-hm (C) Copyright Bobbing Wide 2015-2019
  
 
 This program is free software: you can redistribute it and/or modify
