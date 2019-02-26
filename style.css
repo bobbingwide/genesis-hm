@@ -1,12 +1,12 @@
 /*   
 Theme Name: Genesis Herb Miller
-Theme URI: http://www.bobbingwide.com/themes/genesis-hm
+Theme URI: https://www.bobbingwide.com/themes/genesis-hm
 Description: Child theme of genesis framework with image.php for Herb Miller
 Author: Bobbing Wide  
 Author URI: http://www.oik-plugins.com/author/bobbingwide
-Version: 0.0.4 
+Version: 0.1.0
 Template: genesis 
-Template Version: 2.4.2 
+Template Version: 2.8.1
 Tags:   
 License: GPL-2.0+  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
@@ -309,6 +309,15 @@ img {
 .featured-content img,
 .gallery img {
 	width: auto;
+}
+
+img.attachment-woocommerce_thumbnail size-woocommerce_thumbnail {
+
+}
+
+.widget-wrap ul.product_list_widget li img {
+	width: 50px !important;
+	margin-right: 4px;
 }
 
 /* ## Gallery

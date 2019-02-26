@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2015-2018
+<?php // (C) Copyright Bobbing Wide 2015-2019
 
 genesis_hm_functions_loaded();
 
@@ -116,12 +116,12 @@ function genesis_hm_pre_get_option_site_layout( $layout, $setting ) {
 function genesis_hm_functions_loaded() {
 	//* Child theme (do not remove) - is this really necessary? 
 	define( 'CHILD_THEME_NAME', 'Herb Miller' );
-	define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes/genesis-hm' );
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	define( 'CHILD_THEME_URL', 'https://www.bobbingwide.com/oik-themes/genesis-hm' );
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		$timestamp = filemtime( get_stylesheet_directory() . "/style.css" );
 		define( 'CHILD_THEME_VERSION', $timestamp );
 	} else { 
-		define( 'CHILD_THEME_VERSION', '0.0.2' );
+		define( 'CHILD_THEME_VERSION', '0.1.0' );
 	}
 	// Start the engine	- @TODO Is this necessary?
 	include_once( get_template_directory() . '/lib/init.php' );
@@ -177,7 +177,7 @@ function genesis_hm_functions_loaded() {
 	//add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 	//add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
 	add_action( "after_setup_theme", "genesis_hm_after_setup_theme" );
-	
+
 }
 
 /**
@@ -243,17 +243,23 @@ function genesis_hm_post_meta_filter( $post_meta ) {
 	return $post_meta;
 }
 
-
+/**
+ *  Additional logic for setting up Gutenberg
+ *
+ *  With Genesis v2.8.1 this can be done using configuration files.
+ */
 
 function genesis_hm_after_setup_theme() {
-	add_theme_support( 'editor-color-palette',
-        '#d2d28e',	// Nav bar menu background
-        '#5a5f21',	// Hovered links
-        '#eee',     //
-        '#d5e0c1'		// Footer background
-    );
-		
+
+	$colours = [
+		[ 'name' => 'Nav bar menu background', 'color' => '#d2d28e'],	// Nav bar menu background
+        [ 'name' => 'Hovered links', 'color' => '#5a5f21'],	// Hovered links
+        [ 'name' => 'Greyish', 'color' => '#eee'],     //
+        [ 'name' => 'Footer background', 'color' =>'#d5e0c1']	// Footer background
+	];
+	add_theme_support( 'editor-color-palette', $colours );
 	add_theme_support( 'align-wide' );
+
 
 }
 
