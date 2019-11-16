@@ -7,7 +7,7 @@ genesis_hm_functions_loaded();
  * Display footer credits for the genesis-hm theme
  */	
 function hm_footer_creds_text( $text ) {
-	do_action( "hm_add_shortcodes" );
+	do_action( "oik_add_shortcodes" );
 	$text = "[bw_wpadmin]";
   $text .= '<br />';
 	$text .= "[bw_copyright]"; 
@@ -150,7 +150,7 @@ function genesis_hm_functions_loaded() {
 	//* Add support for 4-column footer widgets - requires extra CSS
 	add_theme_support( 'genesis-footer-widgets', 4 );
 
-	add_filter( 'genesis_footer_creds_text', "hm_footer_creds_text" );
+	add_filter( 'genesis_pre_get_option_footer_text', "hm_footer_creds_text" );
 	
   add_filter( 'genesis_pre_get_option_site_layout', 'genesis_hm_pre_get_option_site_layout', 10, 2 );
 	

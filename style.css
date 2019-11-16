@@ -204,11 +204,12 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+/* Don't do this
 
 li {
 	list-style-type: none;
 }
-
+*/
 hr {
 	border: 0;
 	border-collapse: collapse;
@@ -1206,6 +1207,8 @@ img.alignright,
 	margin-left: 40px;
 }
 
+/** Do we need these?
+
 .entry-content ol > li {
 	list-style-type: decimal;
 }
@@ -1213,6 +1216,7 @@ img.alignright,
 .entry-content ul > li {
 	list-style-type: disc;
 }
+*/
 
 .entry-content ol ol,
 .entry-content ul ul {
