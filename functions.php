@@ -252,10 +252,10 @@ function genesis_hm_post_meta_filter( $post_meta ) {
 function genesis_hm_after_setup_theme() {
 
 	$colours = [
-		[ 'name' => 'Nav bar menu background', 'color' => '#d2d28e'],	// Nav bar menu background
-        [ 'name' => 'Hovered links', 'color' => '#5a5f21'],	// Hovered links
-        [ 'name' => 'Greyish', 'color' => '#eee'],     //
-        [ 'name' => 'Footer background', 'color' =>'#d5e0c1']	// Footer background
+		[ 'name' => 'Nav bar menu background', 'color' => '#d2d28e', 'slug' => 'nbmb'],	// Nav bar menu background
+        [ 'name' => 'Hovered links', 'color' => '#5a5f21', 'slug' => 'hovered_links'],	// Hovered links
+        [ 'name' => 'Greyish', 'color' => '#eee', 'slug' => 'greyish'],     //
+        [ 'name' => 'Footer background', 'color' =>'#d5e0c1', 'slug' => 'footer background' ]	// Footer background
 	];
 	add_theme_support( 'editor-color-palette', $colours );
 	add_theme_support( 'align-wide' );
